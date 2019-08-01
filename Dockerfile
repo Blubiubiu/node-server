@@ -8,11 +8,13 @@ WORKDIR /usr/src/node-app/node-server
 
 COPY package.json /usr/src/node-app/node-server/package.json
 
-RUN npm install --production
+RUN npm install cnpm -g --registry=https://registry.npm.taobao.org
 
-RUN tar -zcvf ../release.tgz .
+RUN cnpm install --production
 
-RUN npm i egg-scripts --save
+# RUN tar -zcvf ../release.tgz .
+
+RUN cnpm i egg-scripts --save
 
 COPY . /usr/src/node-app/koa-server
 #对外暴露的端口
