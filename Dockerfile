@@ -8,7 +8,11 @@ WORKDIR /usr/src/node-app/node-server
 
 COPY package.json /usr/src/node-app/node-server/package.json
 
-RUN npm i --registry=https://registry.npm.taobao.org
+RUN npm install --production
+
+RUN tar -zcvf ../release.tgz .
+
+RUN npm i egg-scripts --save
 
 COPY . /usr/src/node-app/koa-server
 #对外暴露的端口
