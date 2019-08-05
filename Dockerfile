@@ -16,8 +16,8 @@ RUN npm i --production
 
 RUN npm i egg-scripts --save
 
-COPY . /usr/src/node-app/koa-server
+COPY . /usr/src/node-app/node-server
 #对外暴露的端口
-EXPOSE 7004
+# EXPOSE 7000
 #程序启动脚本
 CMD ["npm", "start"]
