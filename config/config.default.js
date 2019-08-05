@@ -24,7 +24,7 @@ module.exports = appInfo => {
             hostname: '39.107.96.198',
             // path: '/var/run/egg.sock',
         }
-    }
+    };
 
     // add your user config here
     const userConfig = {
