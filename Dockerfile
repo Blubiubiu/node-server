@@ -12,12 +12,12 @@ COPY package.json /usr/src/node-app/node-server/package.json
 
 RUN npm i --production
 
-RUN tar -zcvf ../release.tgz .
+# RUN tar -zcvf ../release.tgz .
 
 RUN npm i egg-scripts --save
 
 COPY . /usr/src/node-app/koa-server
 #对外暴露的端口
-EXPOSE 7000
+EXPOSE 7004
 #程序启动脚本
 CMD ["npm", "start"]
