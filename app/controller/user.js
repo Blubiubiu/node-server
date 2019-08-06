@@ -10,3 +10,5 @@ class UserController extends Controller {
         ctx.body = user;
     }
 }
+
+module.exports = UserController;
