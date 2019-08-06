@@ -12,11 +12,28 @@ module.exports = appInfo => {
      **/
     const config = exports = {};
 
+
+
     // use for cookie sign key, should change to your own and keep security
     config.keys = appInfo.name + '_1564578069537_9716';
 
-    // add your middleware config here
-    config.middleware = [];
+    config.security = {
+            domainWhiteList: ['https://test.11vx.cn'],
+            methodnoallow: {
+                enable: false,
+            },
+            xframe: {
+                enable: false,
+            },
+            csrf: {
+                enable: false,
+                headerName: 'x-csrf-token',
+                ignoreJSON: false,
+            },
+        },
+
+        // add your middleware config here
+        config.middleware = [];
 
     config.cluster = {
         listen: {
