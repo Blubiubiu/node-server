@@ -32,7 +32,7 @@ module.exports = appInfo => {
                 ignoreJSON: false,
             },
         },
-
+    //数据库
         config.mysql = {
             // 单数据库信息配置
             client: {
