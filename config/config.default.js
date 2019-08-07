@@ -1,7 +1,6 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
-
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -16,42 +15,41 @@ module.exports = appInfo => {
 
     // use for cookie sign key, should change to your own and keep security
     config.keys = appInfo.name + '_1564578069537_9716';
-
     //白名单
     config.security = {
-            domainWhiteList: ['https://test.11vx.cn'],
-            methodnoallow: {
-                enable: false,
-            },
-            xframe: {
-                enable: false,
-            },
-            csrf: {
-                enable: false,
-                headerName: 'x-csrf-token',
-                ignoreJSON: false,
-            },
+        domainWhiteList: ['https://test.11vx.cn'],
+        methodnoallow: {
+            enable: false,
         },
+        xframe: {
+            enable: false,
+        },
+        csrf: {
+            enable: false,
+            headerName: 'x-csrf-token',
+            ignoreJSON: false,
+        },
+    };
     //数据库
-        config.mysql = {
-            // 单数据库信息配置
-            client: {
-                // host
-                host: '39.107.96.198',
-                // 端口号
-                port: '3306',
-                // 用户名
-                user: 'root',
-                // 密码
-                password: '123456',
-                // 数据库名
-                database: 'test',
-            },
-            // 是否加载到 app 上，默认开启
-            app: true,
-            // 是否加载到 agent 上，默认关闭
-            agent: false,
-        };
+    config.mysql = {
+        // 单数据库信息配置
+        client: {
+            // host
+            host: '39.107.96.198',
+            // 端口号
+            port: '3306',
+            // 用户名
+            user: 'root',
+            // 密码
+            password: '123456',
+            // 数据库名
+            database: 'test01',
+        },
+        // 是否加载到 app 上，默认开启
+        app: true,
+        // 是否加载到 agent 上，默认关闭
+        agent: false,
+    };
 
     // add your middleware config here
     config.middleware = [];
