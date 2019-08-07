@@ -8,9 +8,6 @@ class UserController extends Controller {
         const userId = ctx.params.id;
         const user = await ctx.service.user.find(userId);
         ctx.body = user;
-        ctx.body = {
-            id: 1
-        }
     }
 }
 
