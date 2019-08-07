@@ -9,7 +9,9 @@ class UserService extends Service {
         const user = await app.mysql.get('user', {
             id: uid
         });
-        return user;
+        return {
+            user
+        };
     }
 }
 
