@@ -28,6 +28,10 @@ module.exports = appInfo => {
       ignoreJSON: false
     }
   };
+  config.cors = {
+    origin: "*",
+    allowMethods: "GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS"
+  };
   //数据库
   config.mysql = {
     // 单数据库信息配置
