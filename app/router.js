@@ -8,4 +8,6 @@ module.exports = app => {
   router.get('/', controller.home.index);
   router.get('/test', controller.home.index);
   router.post('/user', controller.user.info);
+  router.post('/comicList', controller.comicList.insertComicList);
+  router.get('/uploadToken', controller.uploadToken.getUploadToken);
 };

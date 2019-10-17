@@ -1,12 +1,12 @@
 pipeline:
   
-  # build-master:
-  #   image: 'node:10.6.0'
-  #   commands:
-  #     - 'npm install --production'
-  #     - 'npm i egg-scripts --save'
-  #   when:
-  #     branch: master
+  build-master:
+    image: 'node:10.6.0'
+    commands:
+      - 'npm install --production'
+      - 'npm i egg-scripts --save'
+    when:
+      branch: master
   public-online:      
     image: plugins/docker 
     volumes:
