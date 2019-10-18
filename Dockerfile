@@ -6,7 +6,7 @@ FROM node:10.6.0
 
 # WORKDIR /usr/src/node-app/node-server
 
-# COPY package.json /usr/src/node-app/node-server/package.json
+COPY package.json /usr/src/node-app/node-server/package.json
 
 # RUN npm install cnpm -g --registry=https://registry.npm.taobao.org
 
