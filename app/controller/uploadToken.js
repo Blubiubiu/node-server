@@ -8,7 +8,10 @@ class UploadTokenController extends Controller {
         
         const data = await ctx.service.uploadToken.token();
 
-        ctx.body = data;
+        ctx.body = {
+            "code": 1,
+            data
+        };
     }
 }
 
