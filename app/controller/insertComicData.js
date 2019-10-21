@@ -7,7 +7,7 @@ class InsertComicDataController extends Controller {
         const { ctx } = this;
         const requestData = ctx.request.body;
         
-        const data = await ctx.service.comicList.insert(requestData);
+        const data = await ctx.service.insertComicData.insert(requestData);
         ctx.body = data;
     }
 }
