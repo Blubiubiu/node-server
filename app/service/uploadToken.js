@@ -7,7 +7,7 @@ class UploadTokenService extends Service {
     const secretKey = "XB2COWDAHCZU31EJs-h5exGi2iuWEJkjnBAsFDA6";
     const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
     const options = {
-      scope: "11vx"
+      scope: "11vx-image"
     };
     const putPolicy = new qiniu.rs.PutPolicy(options);
     const uploadToken = putPolicy.uploadToken(mac);
