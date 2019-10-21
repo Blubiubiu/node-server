@@ -3,7 +3,7 @@
 const Controller = require('egg').Controller;
 
 class InsertComicDataController extends Controller {
-    async insertComicList() {
+    async insertComicData() {
         const { ctx } = this;
         const requestData = ctx.request.body;
         
