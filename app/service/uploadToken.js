@@ -12,10 +12,6 @@ class UploadTokenService extends Service {
     const putPolicy = new qiniu.rs.PutPolicy(options);
     const uploadToken = putPolicy.uploadToken(mac);
     return uploadToken;
-    // const result = await this.ctx.curl(`http://photoserver/uid=${uid}`, {
-    //   dataType: "json"
-    // });
-    // return result.data;
   }
 }
 
