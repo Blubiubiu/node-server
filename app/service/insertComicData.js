@@ -1,6 +1,6 @@
 const Service = require('egg').Service;
 
-class ComicListService extends Service {
+class InsertComicDataService extends Service {
     async insert(data) {
         const {
             app
@@ -17,4 +17,4 @@ class ComicListService extends Service {
     }
 }
 
-module.exports = ComicListService;
+module.exports = InsertComicDataService;

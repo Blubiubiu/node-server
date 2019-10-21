@@ -2,7 +2,7 @@
 
 const Controller = require('egg').Controller;
 
-class ComicListController extends Controller {
+class InsertComicDataController extends Controller {
     async insertComicList() {
         const { ctx } = this;
         const requestData = ctx.request.body;
@@ -12,4 +12,4 @@ class ComicListController extends Controller {
     }
 }
 
-module.exports = ComicListController;
+module.exports = InsertComicDataController;
