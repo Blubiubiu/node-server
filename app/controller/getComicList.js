@@ -10,7 +10,7 @@ class GetComicListController extends Controller {
         const data = await ctx.service.getComicList.get(requestData);
         ctx.body = {
             "code": 1,
-            data
+            "data": data.data
         };
     }
 }
