@@ -3,6 +3,7 @@ const Service = require("egg").Service;
 class GetComicList extends Service {
   async get(requestData) {
     const { app } = this;
+    // 总数
     const total = await app.mysql.select("comic_list");
 
     requestData.page = requestData.page || 1;
