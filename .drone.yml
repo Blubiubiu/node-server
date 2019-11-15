@@ -14,12 +14,6 @@
 # trigger:
 #   branch:
 #   - master
-kind: pipeline
-name: default
-
-platform:
-  os: linux
-  arch: arm
 pipeline:
   
   # build-master:
