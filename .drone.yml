@@ -5,12 +5,11 @@ platform:
   os: linux
   arch: arm
 steps:
-- name: backend
-  image: golang
-  commands:
-    - go get
-    - go build
-    - go test
+steps:
+  - name: run-hello-world
+    image: alpine
+    commands:
+        - echo Test
 # pipeline:
   
 #   # build-master:
